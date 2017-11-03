@@ -25,6 +25,7 @@ RCS/*
 # eclipse
 .project
 .settings
+.buildpath
 
 # netbeans 
 nbproject

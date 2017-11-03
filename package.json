@@ -1,12 +1,12 @@
 {
-  "name": "owncloud-customgroups-dev",
+  "name": "fgsl-customgroups-dev",
   "version": "0.1.0",
   "author": {
-    "name": "Vincent Petry",
-    "email": "pvince81@owncloud.com"
+    "name": "Flávio Gomes da Silva Lisboa",
+    "email": "flavio.lisboa@fgsl.eti.br"
   },
   "private": true,
-  "homepage": "https://github.com/owncloud/",
+  "homepage": "https://github.com/fgsl/customgroups",
   "contributors": [],
   "dependencies": {},
   "devDependencies": {

@@ -1,7 +1,7 @@
 {
-  "name": "owncloud-customgroups",
+  "name": "fgsl-customgroups",
   "version": "0.1",
-  "homepage": "https://github.com/owncloud/customgroups/",
+  "homepage": "https://github.com/fgsl/customgroups/",
   "license": "AGPL",
   "private": true,
   "ignore": [],

@@ -5,24 +5,24 @@
 	<namespace>CustomGroups</namespace>
 	<summary>Enhance collaboration with user-defined sharing groups</summary>
 	<description>
-When working in larger organizations, the number of users in a file sharing platform like ownCloud quickly reaches a point where the segmentation of users becomes very relevant.
-With ownCloud's Custom Groups functionality not only admins but also users are able to create groups of users for quick and easy sharing purposes.
+When working in larger organizations, the number of users in a file sharing platform like Nextcloud quickly reaches a point where the segmentation of users becomes very relevant.
+With Nextcloud's Custom Groups functionality not only admins but also users are able to create groups of users for quick and easy sharing purposes.
 This makes it easier than ever for users to collaborate and work efficiently as a team while saving administrators unnecessary work.
 
-**Using Custom Groups in ownCloud**
-While using the ownCloud web-interface simply click 'Settings' in the top right-hand corner and navigate to the 'Custom Groups' section in the menu. Here users can create and manage their Custom Groups with a few simple clicks. Custom Groups are visible only to members of the group and ownCloud administrators can see and modify all Custom Groups of an instance.
+**Using Custom Groups in Nextcloud**
+While using the Nextcloud web-interface simply click 'Settings' in the top right-hand corner and navigate to the 'Custom Groups' section in the menu. Here users can create and manage their Custom Groups with a few simple clicks. Custom Groups are visible only to members of the group and Nextcloud administrators can see and modify all Custom Groups of an instance.
 Additionally the application provides permission management capabilities to enable a collaborative management of Custom Groups: Members of a group can be classified either as 'Member' or 'Group admin'. Members can share with the group, view the member list and leave the group. Group admins, in addition, can add and remove members, rename or delete the group and set permissions of other members.
 
-Sharing with a Custom Group is as easy and quick as always. Just click on the sharing symbol of a file or folder, go to the Users and Groups tab in the Sharing menu and select the relevant Custom Group from the dropdown menu. Also, all ownCloud clients (Desktop/Android/iOS) can be used to share with Custom Groups conveniently.
+Sharing with a Custom Group is as easy and quick as always. Just click on the sharing symbol of a file or folder, go to the Users and Groups tab in the Sharing menu and select the relevant Custom Group from the dropdown menu. Also, all Nextcloud clients (Desktop/Android/iOS) can be used to share with Custom Groups conveniently.
 
 ### Resources: 
-- [ownCloud X Insights: Custom Groups](https://www.youtube.com/watch?v=jthRk6gw_hE)
+- [Nextcloud X Insights: Custom Groups](https://www.youtube.com/watch?v=jthRk6gw_hE)
 - [App of the Week Blog: Custom Groups](https://owncloud.com/app-week-custom-groups/)</description>
 	<website>https://github.com/owncloud/customgroups/</website>
-	<bugs>https://github.com/owncloud/customgroups/issues</bugs>
-	<repository type="git">http://github.com/owncloud/customgroups.git</repository>
+	<bugs>https://github.com/fgsl/customgroups/issues</bugs>
+	<repository type="git">http://github.com/fgsl/customgroups.git</repository>
 	<licence>AGPL</licence>
-	<author>Vincent Petry</author>
+	<author>Flávio Gomes da Silva Lisboa</author>
 	<version>0.3.5</version>
 	<documentation>
     		<user>https://doc.owncloud.com/server/latest/user_manual/files/webgui/custom_groups.html</user>
@@ -36,7 +36,7 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 	</types>
 	<use-migrations>true</use-migrations>
 	<dependencies>
-		<owncloud min-version="10.0.3" max-version="10.0.99" />
+		<nextcloud min-version="12.0.3" max-version="12.0.99" />
 	</dependencies>
 	<sabre>
 		<plugins>

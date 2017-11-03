@@ -36,6 +36,11 @@ class AdminPanel implements ISettings {
 		$this->config = $config;
 	}
 
+	/**
+	 * @deprecated
+	 * @todo move code to getForm method
+	 * @return \OCP\Template
+	 */
 	public function getPanel() {
 		$tmpl = new Template('customgroups', 'admin');
 		$restrictToSubadmins = $this->config->getAppValue('customgroups', 'only_subadmin_can_create', 'false') === 'true';
@@ -49,8 +54,22 @@ class AdminPanel implements ISettings {
 		return 0;
 	}
 
+	/**
+	 * @deprecated
+	 * @todo move code to getSection method
+	 * @return string
+	 */
 	public function getSectionID() {
 		return 'sharing';
 	}
 
+	public function getForm()
+	{
+		return $this->getPanel();
+	}
+	
+	public function getSection()
+	{
+		return $this->getSectionId();
+	}
 }
