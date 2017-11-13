@@ -12,7 +12,7 @@ It is then possible to share files or folders with these groups.
 
 ## Requirements
 
-* Nextcloud 12.0.3
+* Nextcloud 13.0.0
 
 ## Building the app
 

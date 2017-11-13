@@ -22,7 +22,7 @@
 namespace OCA\CustomGroups;
 
 use OCP\Settings\ISettings;
-use OCP\Template;
+use OCP\AppFramework\Http\TemplateResponse;
 use OCA\CustomGroups\Service\MembershipHelper;
 
 class SettingsPanel implements ISettings {
@@ -33,20 +33,23 @@ class SettingsPanel implements ISettings {
 		$this->helper = $helper;
 	}
 
-	public function getPanel() {
+	public function getForm() {
 		// TODO: cache or add to info.xml ?
-		$modules = json_decode(file_get_contents(__DIR__ . '/../js/modules.json'), true);
-		$tmpl = new Template('customgroups', 'index');
-		$tmpl->assign('modules', $modules);
-		$tmpl->assign('canCreateGroups', $this->helper->canCreateGroups());
-		return $tmpl;
+                $modules = json_decode(file_get_contents(__DIR__ . '/../js/modules.json'), true);
+                $params = [
+                                'modules' => $modules,
+                                'canCreateGroups' => $this->helper->canCreateGroups(),
+                ];
+
+                return new TemplateResponse('customgroups', 'index', $params);
+
 	}
 
 	public function getPriority() {
 		return 0;
 	}
 
-	public function getSectionID() {
+	public function getSection() {
 		return 'customgroups';
 	}
 
