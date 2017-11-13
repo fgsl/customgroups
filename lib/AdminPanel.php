@@ -22,6 +22,7 @@
 namespace OCA\CustomGroups;
 
 use OCP\Settings\ISettings;
+use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Template;
 use OCP\IConfig;
 
@@ -63,9 +64,20 @@ class AdminPanel implements ISettings {
 		return 'sharing';
 	}
 
+	/**
+	 * 
+	 * @return \OCA\CustomGroups\TemplateResponse
+	 */
 	public function getForm()
 	{
-		return $this->getPanel();
+		$restrictToSubadmins = $this->config->getAppValue ( 'customgroups', 'only_subadmin_can_create', 'false' ) === 'true';
+		$allowDuplicateNames = $this->config->getAppValue ( 'customgroups', 'allow_duplicate_names', 'false' ) === 'true';
+		$params = [ 
+				'onlySubAdminCanCreate' => $restrictToSubadmins,
+				'allowDuplicateNames' => $allowDuplicateNames 
+		];
+		
+		return new TemplateResponse ( 'customgroups', 'admin', $params );
 	}
 	
 	public function getSection()

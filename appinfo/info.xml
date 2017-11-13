@@ -36,7 +36,7 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 	</types>
 	<use-migrations>true</use-migrations>
 	<dependencies>
-		<nextcloud min-version="12.0.3" max-version="12.0.99" />
+		<nextcloud min-version="12.0.3" max-version="13.0.99" />
 	</dependencies>
 	<sabre>
 		<plugins>
@@ -49,8 +49,6 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 	<settings>
 		<admin>OCA\CustomGroups\AdminPanel</admin>
 		<personal>OCA\CustomGroups\SettingsPanel</personal>
+		<personal-section>OCA\CustomGroups\SettingsSection</personal-section>
 	</settings>
-	<settings-sections>
-		<personal>OCA\CustomGroups\SettingsSection</personal>
-	</settings-sections>
 </info>

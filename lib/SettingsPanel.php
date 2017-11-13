@@ -33,6 +33,11 @@ class SettingsPanel implements ISettings {
 		$this->helper = $helper;
 	}
 
+	/**
+	 * @deprecated 
+	 * @todo move code to method getForm
+	 * @return \OCP\Template
+	 */
 	public function getPanel() {
 		// TODO: cache or add to info.xml ?
 		$modules = json_decode(file_get_contents(__DIR__ . '/../js/modules.json'), true);
@@ -45,9 +50,23 @@ class SettingsPanel implements ISettings {
 	public function getPriority() {
 		return 0;
 	}
-
+	
+	/**
+	 * @deprecated
+	 * @todo move code to method getSection
+	 * @return string
+	 */
 	public function getSectionID() {
 		return 'customgroups';
 	}
-
+	
+	public function getForm()
+	{
+	    return $this->getPanel();
+	}
+	
+	public function getSection()
+	{
+	    return $this->getSectionID();
+	}
 }
