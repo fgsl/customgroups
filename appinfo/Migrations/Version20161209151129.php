@@ -6,8 +6,6 @@ use OCP\Migration\ISchemaMigration;
 use Doctrine\DBAL\Schema\Schema;
 
 /**
- * @deprecated
- * @todo delete this file
  * Create initial tables for the customgroups app
  */
 class Version20161209151129 implements ISchemaMigration {

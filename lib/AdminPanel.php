@@ -23,7 +23,6 @@ namespace OCA\CustomGroups;
 
 use OCP\Settings\ISettings;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\Template;
 use OCP\IConfig;
 
 class AdminPanel implements ISettings {
@@ -37,51 +36,23 @@ class AdminPanel implements ISettings {
 		$this->config = $config;
 	}
 
-	/**
-	 * @deprecated
-	 * @todo move code to getForm method
-	 * @return \OCP\Template
-	 */
-	public function getPanel() {
-		$tmpl = new Template('customgroups', 'admin');
-		$restrictToSubadmins = $this->config->getAppValue('customgroups', 'only_subadmin_can_create', 'false') === 'true';
-		$tmpl->assign('onlySubAdminCanCreate', $restrictToSubadmins);
-		$allowDuplicateNames = $this->config->getAppValue('customgroups', 'allow_duplicate_names', 'false') === 'true';
-		$tmpl->assign('allowDuplicateNames', $allowDuplicateNames);
-		return $tmpl;
+	public function getForm() {
+        $restrictToSubadmins = $this->config->getAppValue('customgroups', 'only_subadmin_can_create', 'false') === 'true';
+        $allowDuplicateNames = $this->config->getAppValue('customgroups', 'allow_duplicate_names', 'false') === 'true';
+                $params = [
+                                'onlySubAdminCanCreate' => $restrictToSubadmins,
+                                'allowDuplicateNames' => $allowDuplicateNames,
+                ];
+
+                return new TemplateResponse('customgroups', 'admin', $params);
 	}
 
 	public function getPriority() {
 		return 0;
 	}
 
-	/**
-	 * @deprecated
-	 * @todo move code to getSection method
-	 * @return string
-	 */
-	public function getSectionID() {
+	public function getSection() {
 		return 'sharing';
 	}
 
-	/**
-	 * 
-	 * @return \OCA\CustomGroups\TemplateResponse
-	 */
-	public function getForm()
-	{
-		$restrictToSubadmins = $this->config->getAppValue ( 'customgroups', 'only_subadmin_can_create', 'false' ) === 'true';
-		$allowDuplicateNames = $this->config->getAppValue ( 'customgroups', 'allow_duplicate_names', 'false' ) === 'true';
-		$params = [ 
-				'onlySubAdminCanCreate' => $restrictToSubadmins,
-				'allowDuplicateNames' => $allowDuplicateNames 
-		];
-		
-		return new TemplateResponse ( 'customgroups', 'admin', $params );
-	}
-	
-	public function getSection()
-	{
-		return $this->getSectionId();
-	}
 }
