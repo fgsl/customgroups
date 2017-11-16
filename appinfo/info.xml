@@ -18,7 +18,7 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 ### Resources: 
 - [Nextcloud X Insights: Custom Groups](https://www.youtube.com/watch?v=jthRk6gw_hE)
 - [App of the Week Blog: Custom Groups](https://owncloud.com/app-week-custom-groups/)</description>
-	<website>https://github.com/owncloud/customgroups/</website>
+	<website>https://github.com/fgsl/customgroups/</website>
 	<bugs>https://github.com/fgsl/customgroups/issues</bugs>
 	<repository type="git">http://github.com/fgsl/customgroups.git</repository>
 	<licence>AGPL</licence>
@@ -46,9 +46,14 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 			<collection>OCA\CustomGroups\Dav\RootCollection</collection>
 		</collections>
 	</sabre>
-	<settings>
+<!--<settings>
 		<admin>OCA\CustomGroups\AdminPanel</admin>
 		<personal>OCA\CustomGroups\SettingsPanel</personal>
 		<personal-section>OCA\CustomGroups\SettingsSection</personal-section>
-	</settings>
+	</settings>-->
+    <settings>
+        <admin>OCA\CustomGroups\Settings\Admin</admin>
+        <personal>OCA\CustomGroups\Settings\Personal</personal>
+        <personal-section>OCA\CustomGroups\Settings\PersonalSection</personal-section>
+    </settings>
 </info>

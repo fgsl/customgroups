@@ -1,7 +1,7 @@
 <?php
 /**
  * ownCloud CustomGroups
- *
+ * @deprecated
  * @author Sujith Haridasan <sharidasan@owncloud.com>
  * @copyright 2017 ownCloud GmbH.
  *
