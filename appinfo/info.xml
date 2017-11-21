@@ -23,7 +23,7 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 	<repository type="git">http://github.com/fgsl/customgroups.git</repository>
 	<licence>AGPL</licence>
 	<author>Flávio Gomes da Silva Lisboa</author>
-	<version>0.3.5</version>
+	<version>0.1.0</version>
 	<documentation>
     		<user>https://doc.owncloud.com/server/latest/user_manual/files/webgui/custom_groups.html</user>
 		<admin>https://doc.owncloud.com/server/latest/admin_manual/configuration/user/user_configuration.html?highlight=custom%20groups#enabling-custom-groups</admin>
@@ -36,7 +36,7 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 	</types>
 	<use-migrations>true</use-migrations>
 	<dependencies>
-		<nextcloud min-version="12.0.3" max-version="13.0.99" />
+		<nextcloud min-version="12.0.3" max-version="13.0.0" />
 	</dependencies>
 	<sabre>
 		<plugins>
@@ -46,11 +46,6 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 			<collection>OCA\CustomGroups\Dav\RootCollection</collection>
 		</collections>
 	</sabre>
-<!--<settings>
-		<admin>OCA\CustomGroups\AdminPanel</admin>
-		<personal>OCA\CustomGroups\SettingsPanel</personal>
-		<personal-section>OCA\CustomGroups\SettingsSection</personal-section>
-	</settings>-->
     <settings>
         <admin>OCA\CustomGroups\Settings\Admin</admin>
         <personal>OCA\CustomGroups\Settings\Personal</personal>

@@ -254,7 +254,8 @@ class MembershipHelper {
 		$internalOffset = 0;
 		// loop until the $totalResults reaches $limit size or no more results exist
 		do {
-			$results = $this->userManager->find($pattern, $internalLimit, $internalOffset);
+			//$results = $this->userManager->find($pattern, $internalLimit, $internalOffset);
+			$results = $this->userManager->search($pattern, $internalLimit, $internalOffset);
 			foreach ($results as $result) {
 				if ($totalResultCount >= $limit) {
 					break;

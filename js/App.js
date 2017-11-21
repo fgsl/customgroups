@@ -1,13 +1,12 @@
-/*
- * Copyright (c) 2016 Vincent Petry <pvince81@owncloud.com>
- *
- * This file is licensed under the Affero General Public License version 3
- * or later.
- *
+/**
+ * Copyright (c) 2017 Flávio Gomes da Silva Lisboa <flavio.lisboa@fgsl.eti.br>
+ * 
+ * This file is licensed under the Affero General Public License version 3 or
+ * later.
+ * 
  * See the COPYING-README file.
- *
+ * 
  */
-
 (function(OCA) {
 
 	var App = OC.Backbone.View.extend({
