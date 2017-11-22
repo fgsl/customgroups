@@ -1,0 +1,33 @@
+<!ELEMENT info (id,name,namespace,summary,description,website,bugs,repository,licence,author,version,documentation,category,screenshot,types,dependencies,sabre,settings)>
+<!ELEMENT id  (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT namespace (#PCDATA)>
+<!ELEMENT summary  (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT website  (#PCDATA)>
+<!ELEMENT bugs (#PCDATA)>
+<!ELEMENT repository (#PCDATA)>
+<!ATTLIST repository type CDATA "">
+<!ELEMENT licence (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT documentation (user,admin)>
+<!ELEMENT user (#PCDATA)>
+<!ELEMENT admin (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT screenshot (#PCDATA)>
+<!ELEMENT types (authentication,dav)>
+<!ELEMENT authentication (#PCDATA)>
+<!ELEMENT dav (#PCDATA)>
+<!ELEMENT dependencies (nextcloud)>
+<!ELEMENT nextcloud (#PCDATA)>
+<!ATTLIST nextcloud min-version CDATA "0">
+<!ATTLIST nextcloud max-version CDATA "0">
+<!ELEMENT sabre (plugins,collections)>
+<!ELEMENT plugins (plugin)>
+<!ELEMENT plugin (#PCDATA)>
+<!ELEMENT collections (collection)>
+<!ELEMENT collection (#PCDATA)>
+<!ELEMENT settings (admin,personal,personal-section)>
+<!ELEMENT personal (#PCDATA)>
+<!ELEMENT personal-section (#PCDATA)>

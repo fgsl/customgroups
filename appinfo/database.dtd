@@ -1,0 +1,13 @@
+<!ELEMENT database (name,create,overwrite,charset,table,table)>
+<!ELEMENT table (name,declaration)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT create (#PCDATA)>
+<!ELEMENT overwrite (#PCDATA)>
+<!ELEMENT charset (#PCDATA)>
+<!ELEMENT declaration (field*)>
+<!ELEMENT field (name,type,notnull*,default*,autoincrement*,length*)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT notnull (#PCDATA)>
+<!ELEMENT default (#PCDATA)>
+<!ELEMENT autoincrement (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
