@@ -19,8 +19,6 @@
  *
  */
 
-/*
- * @todo remove
 $app = new \OCA\CustomGroups\Application();
 $app->registerGroupBackend();
 $app->registerNotifier();
@@ -32,7 +30,7 @@ if(!defined('PHPUNIT') && !\OC::$CLI) {
       \OCP\Util::addStyle('customgroups', 'icon');
    }
  }
-*/
+
 \OC::$server->getNavigationManager()->add(function () {
 	$urlGenerator = \OC::$server->getURLGenerator();
 	return [
