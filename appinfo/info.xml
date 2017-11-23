@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!DOCTYPE info SYSTEM "info.dtd">
 <info>
 	<id>customgroups</id>
 	<name>Custom Groups</name>
@@ -34,7 +35,6 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 		<authentication/>
 		<dav/>
 	</types>
-	<use-migrations>true</use-migrations>
 	<dependencies>
 		<nextcloud min-version="12.0.3" max-version="13.0.0" />
 	</dependencies>

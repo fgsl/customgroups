@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE database SYSTEM "database.dtd">
 <database>
 	<name>*dbname*</name>
 	<create>true</create>
@@ -45,8 +46,8 @@
                         <field>
                                 <name>role</name>
                                 <type>integer</type>
-                                <default>0</default>
                                 <notnull>true</notnull>
+                                <default>0</default>                                
                         </field>
                 </declaration>
         </table>
