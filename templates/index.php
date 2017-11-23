@@ -24,27 +24,7 @@ style('settings', 'settings');
 script('core', 'oc-backbone');
 script('customgroups', 'oc-backbone-webdav');
 script('customgroups', 'vendor/handlebars/handlebars');
-
-$modules = [
-	"App",
-	"MemberModel",
-	"MembersCollection",
-	"MembersInputView",
-	"MembersView",
-	"GroupModel",
-	"GroupsCollection",
-	"GroupsView",
-	"templates/app.handlebars",
-	"templates/list.handlebars",
-	"templates/listItem.handlebars",
-	"templates/membersList.handlebars",
-	"templates/membersListHeader.handlebars",
-	"templates/membersListItem.handlebars",
-	"templates/membersInput.handlebars",
-	"templates/membersInputItem.handlebars"
-];
-
-foreach ($modules as $module) {
+foreach ($_['modules'] as $module) {
 	script('customgroups', $module);
 }
 ?>

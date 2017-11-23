@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!DOCTYPE info SYSTEM "info.dtd">
 <info>
 	<id>customgroups</id>
 	<name>Custom Groups</name>
@@ -35,6 +34,7 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 		<authentication/>
 		<dav/>
 	</types>
+	<use-migrations>true</use-migrations>
 	<dependencies>
 		<nextcloud min-version="12.0.3" max-version="13.0.0" />
 	</dependencies>
@@ -46,9 +46,9 @@ Sharing with a Custom Group is as easy and quick as always. Just click on the sh
 			<collection>OCA\CustomGroups\Dav\RootCollection</collection>
 		</collections>
 	</sabre>
-    <settings>
-        <admin>OCA\CustomGroups\Settings\Admin</admin>
-        <personal>OCA\CustomGroups\Settings\Personal</personal>
-        <personal-section>OCA\CustomGroups\Settings\PersonalSection</personal-section>
-    </settings>
+	<settings>
+		<admin>OCA\CustomGroups\AdminPanel</admin>
+		<personal>OCA\CustomGroups\SettingsPanel</personal>
+		<personal-section>OCA\CustomGroups\SettingsSection</personal-section>
+	</settings>
 </info>
