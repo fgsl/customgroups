@@ -8,7 +8,9 @@
   "private": true,
   "homepage": "https://github.com/fgsl/customgroups",
   "contributors": [],
-  "dependencies": {},
+  "dependencies": {
+    "handlebars": "^4.0.11"
+  },
   "devDependencies": {
     "bower": "~1.8.0",
     "handlebars": "^4.0.5",

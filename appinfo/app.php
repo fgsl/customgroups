@@ -18,11 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  */
-
 $app = new \OCA\CustomGroups\Application();
 $app->registerGroupBackend();
 $app->registerNotifier();
-
 if(!defined('PHPUNIT') && !\OC::$CLI) {
    $pathInfo = \OC::$server->getRequest()->getPathInfo();
    if (strstr($pathInfo, 'settings/') !== false) {

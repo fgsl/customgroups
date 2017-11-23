@@ -254,7 +254,8 @@ class MembershipHelper {
 		$internalOffset = 0;
 		// loop until the $totalResults reaches $limit size or no more results exist
 		do {
-			$results = $this->userManager->find($pattern, $internalLimit, $internalOffset);
+			//$results = $this->userManager->find($pattern, $internalLimit, $internalOffset);
+			$results = $this->userManager->search($pattern, $internalLimit, $internalOffset);
 			foreach ($results as $result) {
 				if ($totalResultCount >= $limit) {
 					break;
@@ -278,8 +279,7 @@ class MembershipHelper {
 	 * @param array $groupInfo group info
 	 */
 	public function notifyUser($targetUserId, array $groupInfo) {
-		$link = $this->urlGenerator->linkToRouteAbsolute('settings.SettingsPage.getPersonal', ['sectionid' => 'customgroups', 'group' => $groupInfo['uri']]);
-
+		$link = $this->urlGenerator->linkToRouteAbsolute('settings.PersonalSettings.index', ['section' => 'customgroups', 'group' => $groupInfo['uri']]);
 		$user = $this->getUser($this->getUserId());
 
 		$notification = $this->notificationManager->createNotification();
@@ -301,7 +301,7 @@ class MembershipHelper {
 	 * @param array $memberInfo membership info
 	 */
 	public function notifyUserRoleChange($targetUserId, array $groupInfo, array $memberInfo) {
-		$link = $this->urlGenerator->linkToRouteAbsolute('settings.SettingsPage.getPersonal', ['sectionid' => 'customgroups', 'group' => $groupInfo['uri']]);
+		$link = $this->urlGenerator->linkToRouteAbsolute('settings.PersonalSettings.index', ['section' => 'customgroups', 'group' => $groupInfo['uri']]);
 		$user = $this->getUser($this->getUserId());
 
 		$notification = $this->notificationManager->createNotification();
@@ -329,7 +329,7 @@ class MembershipHelper {
 	 * @param array $groupInfo group info
 	 */
 	public function notifyUserRemoved($targetUserId, array $groupInfo) {
-		$link = $this->urlGenerator->linkToRouteAbsolute('settings.SettingsPage.getPersonal', ['sectionid' => 'customgroups']);
+		$link = $this->urlGenerator->linkToRouteAbsolute('settings.PersonalSettings.index', ['section' => 'customgroups']);
 		$user = $this->getUser($this->getUserId());
 
 		$notification = $this->notificationManager->createNotification();

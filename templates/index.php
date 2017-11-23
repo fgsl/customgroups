@@ -1,8 +1,8 @@
 <?php
 /**
- * @author Vincent Petry <pvince81@owncloud.com>
+ * @author Flávio Gomes da Silva Lisboa <flavio.lisboa@fgsl.eti.br>
  *
- * @copyright Copyright (c) 2016, ownCloud GmbH
+ * @copyright Copyright (c) 2017, Nextcloud GmbH
  * @license AGPL-3.0
  *
  * This code is free software: you can redistribute it and/or modify
@@ -22,12 +22,11 @@
 style('customgroups', 'app');
 style('settings', 'settings');
 script('core', 'oc-backbone');
-script('core', 'oc-backbone-webdav');
+script('customgroups', 'oc-backbone-webdav');
 script('customgroups', 'vendor/handlebars/handlebars');
-
 foreach ($_['modules'] as $module) {
 	script('customgroups', $module);
 }
 ?>
 
-<div id="customgroups" class="section" data-cancreategroups="<?php p($_['canCreateGroups'] ? 'true' : 'false') ?>"></div>
+<div id="customgroups" class="section" data-cancreategroups="<?php p($_['canCreateGroups'] ? 'true' : 'false') ?>">

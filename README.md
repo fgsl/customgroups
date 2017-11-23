@@ -1,17 +1,18 @@
-# ownCloud custom groups support
+# Nextcloud custom groups support
 
 This apps makes it possible for users to create their own custom groups and manage their members.
 It is then possible to share files or folders with these groups.
 
 ## QA metrics on master branch:
 
-[![Build Status](https://travis-ci.org/owncloud/customgroups.svg?branch=master)](https://travis-ci.org/owncloud/customgroups/branches)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/owncloud/customgroups/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/owncloud/customgroups/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/owncloud/customgroups/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/owncloud/customgroups/?branch=master)
+<!-- Someday when Nextcloud team accepts this app as official ->
+<!--[![Build Status](https://travis-ci.org/owncloud/customgroups.svg?branch=master)](https://travis-ci.org/owncloud/customgroups/branches)-->
+<!--[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/owncloud/customgroups/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/owncloud/customgroups/?branch=master)-->
+<!--[![Code Coverage](https://scrutinizer-ci.com/g/owncloud/customgroups/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/owncloud/customgroups/?branch=master)-->
 
 ## Requirements
 
-* ownCloud 10.0
+* Nextcloud 13.0.0
 
 ## Building the app
 
@@ -33,7 +34,7 @@ It is then possible to share files or folders with these groups.
 
 * Run `make help` to get information about the different targets.
 
-## Authors:
+## Adapter from Owncloud app:
 
-[Vincent Petry](https://github.com/PVince81/) :: PVince81 at owncloud dot com
+[Flávio Gomes da Silva Lisboa](https://github.com/fgsl/) :: flavio dot lisboa at fgsl dot et dot br
 

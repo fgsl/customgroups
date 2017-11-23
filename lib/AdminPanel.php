@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Vincent Petry <pvince81@owncloud.com>
- *
+ * @deprecated
  * @copyright Copyright (c) 2017, ownCloud GmbH
  * @license AGPL-3.0
  *
